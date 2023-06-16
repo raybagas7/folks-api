@@ -1,7 +1,7 @@
 import express from 'express';
 import { Request, Response } from 'express';
-import { CreateContactUseCase } from '../../domain/use-cases/contact/create-contact';
-import { GetAllContactsUseCase } from '../../domain/use-cases/contact/get-all-contacts';
+import { CreateContactUseCase } from '../../domain/interfaces/use-cases/contact/create-contact';
+import { GetAllContactsUseCase } from '../../domain/interfaces/use-cases/contact/get-all-contacts';
 
 export default function ContactsRouter(
   getAllContactsUseCase: GetAllContactsUseCase,
