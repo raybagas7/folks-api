@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686920441582" clover="3.2.0">
-  <project timestamp="1686920441582" name="All files">
-    <metrics statements="36" coveredstatements="36" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="12" elements="48" coveredelements="48" complexity="0" loc="36" ncloc="36" packages="4" files="5" classes="5"/>
+<coverage generated="1687008401070" clover="3.2.0">
+  <project timestamp="1687008401070" name="All files">
+    <metrics statements="42" coveredstatements="42" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="16" elements="58" coveredelements="58" complexity="0" loc="42" ncloc="42" packages="5" files="6" classes="6"/>
     <package name="src">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="server.ts" path="D:\Project\folks-api\src\server.ts">
@@ -10,6 +10,18 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.data.data-sources.mongodb">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="mongodb-contact-data-source.ts" path="D:\Project\folks-api\src\data\data-sources\mongodb\mongodb-contact-data-source.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.domain.respositories">

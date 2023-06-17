@@ -1,6 +1,6 @@
 import { Contact } from '../../../../domain/entities/contact';
 import { ContactRepository } from '../../../../domain/interfaces/repositories/contact-repository';
-import { GetAllContacs } from '../../../../domain/use-cases/get-all-contacts';
+import { GetAllContacts } from '../../../../domain/use-cases/get-all-contacts';
 
 describe('Get All Contacts Use Case', () => {
   class MockContactRepository implements ContactRepository {
@@ -27,7 +27,7 @@ describe('Get All Contacts Use Case', () => {
     jest
       .spyOn(mockContactRepository, 'getContacts')
       .mockImplementation(() => Promise.resolve(ExpectedResult));
-    const getAllContactsUse = new GetAllContacs(mockContactRepository);
+    const getAllContactsUse = new GetAllContacts(mockContactRepository);
     const result = await getAllContactsUse.execute();
     expect(result).toStrictEqual(ExpectedResult);
   });
