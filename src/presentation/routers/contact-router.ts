@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { NextFunction } from 'express';
 import { Request, Response } from 'express';
 import { CreateContactUseCase } from '../../domain/interfaces/use-cases/contact/create-contact';
 import { GetAllContactsUseCase } from '../../domain/interfaces/use-cases/contact/get-all-contacts';
@@ -9,22 +9,22 @@ export default function ContactsRouter(
 ) {
   const router = express.Router();
 
-  router.get('/', async (req: Request, res: Response) => {
+  router.get('/', async (req: Request, res: Response, next: NextFunction) => {
     try {
       const contacts = await getAllContactsUseCase.execute();
       res.send(contacts);
     } catch (err) {
-      res.status(500).send({ message: 'Error fetching contacts data' });
+      next(err);
     }
   });
 
-  router.post('/', async (req: Request, res: Response) => {
+  router.post('/', async (req: Request, res: Response, next: NextFunction) => {
     try {
       await createContactUseCase.execute(req.body);
       res.statusCode = 201;
       res.json({ message: 'Created' });
     } catch (err) {
-      res.status(500).send({ message: 'Error saving contact data' });
+      next(err);
     }
   });
 
